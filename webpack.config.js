@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+//const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const ErrorOverlayPlugin = require("error-overlay-webpack-plugin");
 
 const isDev = process.env.NODE_ENV === "development"; // проверка если в режиме разработки
@@ -45,13 +45,13 @@ module.exports = {
     // main: ['@babel/polyfill', './index.js'], // если нужна поддержка старых браузеров
   },
   output: {
-    filename: isDev ? `js/[name].js` : `js/[name].[contenthash:8].chunk.js`,
+    filename: isDev ? `[name].js` : `js/[name].[contenthash:8].chunk.js`,
     path: path.resolve(__dirname, "build"),
   },
   devServer: {
-    // сохраняет в кеш
-    // overlay: true,
-    port: 4200, // life перезагрузка webpack-dev-server когда сохраняешь нужно --open для открытия браузера
+    // // сохраняет в кеш
+    // // overlay: true,
+    port: 8080, // life перезагрузка webpack-dev-server когда сохраняешь нужно --open для открытия браузера
     hot: isDev,
   },
 

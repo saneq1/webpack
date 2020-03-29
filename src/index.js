@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import "./scss.scss";
+// import "./scss.scss";
 
 const App = () => (
   <div className="container">

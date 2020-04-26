@@ -134,7 +134,7 @@ module.exports = {
         use: cssLoader("sass-loader"),
       },
       {
-        test: /\.ts$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         loader: "babel-loader",
         options: {

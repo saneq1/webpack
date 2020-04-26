@@ -51,6 +51,7 @@ module.exports = {
   devServer: {
     // // сохраняет в кеш
     // // overlay: true,
+      clientLogLevel: 'silent',
     port: 8080, // life перезагрузка webpack-dev-server когда сохраняешь нужно --open для открытия браузера
     hot: isDev,
   },
